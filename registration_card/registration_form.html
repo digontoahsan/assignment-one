@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+         }
+
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #6b73ff 0%, #6a11cb 100%);
+            font-family: Arial, sans-serif;
+        }
+
+        .registration-card {
+            width: 780px;
+            padding: 30px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 35px;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+
+        .form-item {
+            width: 48%;
+            display: flex;
+            align-items: center;
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+            margin-right: 10px;
+            width: 130px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="password"] {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            flex-grow: 1;
+        }
+
+        .gender-options {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 15px;
+            margin-bottom: 30px;
+        }
+
+        .gender-options input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        .gender-options label {
+            margin-right: 10px;
+            font-size: 14px;
+            font-weight: normal;
+            width: 50px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .cancel-btn {
+            background-color: #ff5c5c;
+            color: #fff;
+            margin-right: 15px;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: #fff;
+        }
+
+        .cancel-btn:hover {
+            background-color: #ff3333;
+        }
+
+        .submit-btn:hover {
+            background: linear-gradient(135deg, #32a6e0, #6d5dfc);
+        }
+    </style>
+</head>
+<body>
+    <div class="registration-card">
+        <h2>Registration</h2>
+        <form>
+            <div class="form-group">
+                <div class="form-item">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Enter your name" required>
+                </div>
+                <div class="form-item">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" placeholder="Enter your username" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-item">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-item">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your number" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-item">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                </div>
+                <div class="form-item">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                </div>
+            </div>
+
+            <label>Gender</label>
+            <div class="gender-options">
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+
+                <input type="radio" id="other" name="gender" value="other">
+                <label for="other">Other</label>
+            </div>
+
+            <div class="buttons">
+                <button type="reset" class="cancel-btn">Cancel</button>
+                <button type="submit" class="submit-btn">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
